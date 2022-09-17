@@ -15,8 +15,8 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
+            Color("dunkelgrün")
             if !showProfile {
-                Color("dunkelgrün")
                 VStack {
                     Image("lensLogo")
                         .resizable()
@@ -67,7 +67,6 @@ struct ContentView: View {
                 }
                 .padding()
             } else if showProfile == true {
-                Color("lightGray")
                 VStack {
                     ProfileView()
                 }
