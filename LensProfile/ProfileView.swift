@@ -136,7 +136,9 @@ struct ProfileView: View {
                 .cornerRadius(24)
             }
             Button(role: .cancel) {
-                showProfile.toggle()
+                withAnimation {
+                    showProfile.toggle()
+                }
             } label: {
                 HStack {
                     Spacer()

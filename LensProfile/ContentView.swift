@@ -44,7 +44,9 @@ struct ContentView: View {
                         )
                         .submitLabel(.search)
                         .onSubmit {
-                            showProfile.toggle()
+                            withAnimation {
+                                showProfile.toggle()
+                            }
                         }
                         Text(".lens")
                             .foregroundColor(.white)
