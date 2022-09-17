@@ -10,6 +10,10 @@ import SwiftUI
 struct ProfileView: View {
     @State var profile: ProfileQuery.Data.Profile = ProfileQuery.Data.Profile(id: "", isDefault: true, handle: "Loading", ownedBy: "Loading", stats: ProfileQuery.Data.Profile.Stat(totalFollowers: 2, totalFollowing: 2, totalPosts: 2, totalComments: 0, totalMirrors: 0, totalPublications: 2, totalCollects: 2))
 
+    let url = URL(string: "https://lenster.xyz/u/cappuccino.lens")!
+
+    @Binding var showProfile: Bool
+
     var body: some View {
         VStack(alignment: .center) {
             HStack {
@@ -101,6 +105,30 @@ struct ProfileView: View {
                     .compositingGroup()
             )
             Spacer()
+            ShareLink(item: url) {
+                HStack {
+                    Spacer()
+                    Label("Share your profile", systemImage:  "square.and.arrow.up")
+                    Spacer()
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(24)
+            }
+            Button(role: .cancel) {
+                showProfile.toggle()
+            } label: {
+                HStack {
+                    Spacer()
+                    Label("Find another profile", systemImage:  "magnifyingglass")
+                    Spacer()
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(24)
+            }
+            .padding(.bottom)
+
 
 
             //            Text(profile.picture?.asMediaSet?.original.url ?? "not found")

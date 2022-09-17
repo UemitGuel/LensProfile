@@ -68,7 +68,7 @@ struct ContentView: View {
                 .padding()
             } else if showProfile == true {
                 VStack {
-                    ProfileView()
+                    ProfileView(showProfile: $showProfile)
                 }
             }
         }
