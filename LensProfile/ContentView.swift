@@ -66,9 +66,11 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding()
-            }
-            else {
+            } else if showProfile == true {
                 Color("lightgray")
+                VStack {
+                    ProfileView()
+                }
             }
         }
         .ignoresSafeArea()
