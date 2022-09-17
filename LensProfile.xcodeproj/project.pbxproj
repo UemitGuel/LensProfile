@@ -16,6 +16,8 @@
 		EB57F24D28D5D30F0039C9EF /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F24C28D5D30F0039C9EF /* Apollo.swift */; };
 		EB57F25328D5DF0E0039C9EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25228D5DF0E0039C9EF /* API.swift */; };
 		EB57F25528D5DF810039C9EF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25428D5DF810039C9EF /* Network.swift */; };
+		EB57F25728D5EEC50039C9EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25628D5EEC50039C9EF /* ProfileView.swift */; };
+		EB57F25928D5F0590039C9EF /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25828D5F0590039C9EF /* AsyncButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EB57F25128D5DE8A0039C9EF /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = LensProfile/schema.json; sourceTree = SOURCE_ROOT; };
 		EB57F25228D5DF0E0039C9EF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = LensProfile/API.swift; sourceTree = SOURCE_ROOT; };
 		EB57F25428D5DF810039C9EF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		EB57F25628D5EEC50039C9EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EB57F25828D5F0590039C9EF /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				EB57F24B28D5D2FB0039C9EF /* GraphQL */,
 				EB57F21428D502930039C9EF /* LensProfileApp.swift */,
 				EB57F21628D502930039C9EF /* ContentView.swift */,
+				EB57F25828D5F0590039C9EF /* AsyncButton.swift */,
+				EB57F25628D5EEC50039C9EF /* ProfileView.swift */,
 				EB57F21828D502940039C9EF /* Assets.xcassets */,
 				EB57F21A28D502940039C9EF /* Preview Content */,
 			);
@@ -192,9 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB57F25528D5DF810039C9EF /* Network.swift in Sources */,
+				EB57F25928D5F0590039C9EF /* AsyncButton.swift in Sources */,
 				EB57F21728D502930039C9EF /* ContentView.swift in Sources */,
 				EB57F24D28D5D30F0039C9EF /* Apollo.swift in Sources */,
 				EB57F25328D5DF0E0039C9EF /* API.swift in Sources */,
+				EB57F25728D5EEC50039C9EF /* ProfileView.swift in Sources */,
 				EB57F21528D502930039C9EF /* LensProfileApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
