@@ -1,0 +1,16 @@
+query Profile {
+  profile(request: { handle: "cappuccino.lens" }) {
+    id
+    name
+    handle
+    stats {
+      totalFollowers
+      totalFollowing
+      totalPosts
+      totalComments
+      totalMirrors
+      totalPublications
+      totalCollects
+    }
+    }
+}

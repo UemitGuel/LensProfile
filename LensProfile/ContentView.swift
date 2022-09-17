@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var profile: ProfileQuery.Data.Profile = ProfileQuery.Data.Profile(id: "", handle: "", stats: ProfileQuery.Data.Profile.Stat(totalFollowers: 1, totalFollowing: 2, totalPosts: 3, totalComments: 4, totalMirrors: 5, totalPublications: 6, totalCollects: 7))
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(profile.handle)
         }
         .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        .onAppear {
+            Network.shared.apollo.fetch(query: ProfileQuery()) { result in
+                switch result {
+                case .success(let graphQLResult):
+                    print("Success! Result: \(graphQLResult.data?.profile)")
+                    profile = (graphQLResult.data?.profile)!
+                case .failure(let error):
+                    print("Failure! Error: \(error)")
+                }
+            }
+        }
     }
 }
