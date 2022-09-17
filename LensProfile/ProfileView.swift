@@ -10,8 +10,6 @@ import SwiftUI
 struct ProfileView: View {
     @State var profile: ProfileQuery.Data.Profile = ProfileQuery.Data.Profile(id: "", isDefault: true, handle: "Loading", ownedBy: "Loading", stats: ProfileQuery.Data.Profile.Stat(totalFollowers: 2, totalFollowing: 2, totalPosts: 2, totalComments: 0, totalMirrors: 0, totalPublications: 2, totalCollects: 2))
 
-    let url = URL(string: "https://lenster.xyz/u/cappuccino.lens")!
-
     @Binding var showProfile: Bool
 
     var body: some View {
@@ -111,12 +109,28 @@ struct ProfileView: View {
                     .compositingGroup()
             )
             Spacer()
-            ShareLink(item: url) {
+            Link(destination: URL(string: "https://www.lensfrens.xyz/" + profile.handle)!) {
+                HStack {
+                    Spacer()
+                    Image("lensLogoBlack")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 24)
+                    Text("Show Profile on Lensfrens")
+                    Spacer()
+                }
+                .foregroundColor(Color("dunkelgrün"))
+                .padding()
+                .background(Color.white)
+                .cornerRadius(24)
+            }
+            ShareLink(item: URL(string: "https://www.lensfrens.xyz/" + profile.handle)!) {
                 HStack {
                     Spacer()
                     Label("Share your profile", systemImage:  "square.and.arrow.up")
                     Spacer()
                 }
+                .foregroundColor(Color("dunkelgrün"))
                 .padding()
                 .background(Color.white)
                 .cornerRadius(24)
@@ -129,6 +143,7 @@ struct ProfileView: View {
                     Label("Find another profile", systemImage:  "magnifyingglass")
                     Spacer()
                 }
+                .foregroundColor(Color("dunkelgrün"))
                 .padding()
                 .background(Color.white)
                 .cornerRadius(24)

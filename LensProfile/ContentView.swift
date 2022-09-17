@@ -26,25 +26,32 @@ struct ContentView: View {
                     Text("Enter your Lens Handle")
                         .font(.headline)
                         .foregroundColor(.white)
-                    TextField(
-                        "",
-                        text: $handle
-                    )
-                    .autocorrectionDisabled()
-                    .padding(8)
-                    .frame(height: 52)
-                    .background(
-                        ZStack(alignment: .topLeading) {
-                            RoundedRectangle(cornerRadius: 8, style: .circular)
-                                .stroke(.white, lineWidth: 2)
+                    HStack(alignment: .center) {
+                        TextField(
+                            "",
+                            text: $handle
+                        )
+                        .foregroundColor(.white)
+                        .autocorrectionDisabled()
+                        .padding(8)
+                        .frame(height: 52)
+                        .background(
+                            ZStack(alignment: .topLeading) {
+                                RoundedRectangle(cornerRadius: 8, style: .circular)
+                                    .stroke(.white, lineWidth: 2)
+                            }
+                            .compositingGroup()
+                        )
+                        .submitLabel(.search)
+                        .onSubmit {
+                            showProfile.toggle()
                         }
-                        .compositingGroup()
-                    )
-                    .submitLabel(.search)
-                    .onSubmit {
-                        showProfile.toggle()
+                        Text(".lens")
+                            .foregroundColor(.white)
+                            .font(.title)
                     }
                     .padding(.bottom, 48)
+
                     AsyncButton {
                         withAnimation {
                             showProfile.toggle()
