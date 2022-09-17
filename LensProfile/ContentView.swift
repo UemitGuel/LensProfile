@@ -67,7 +67,7 @@ struct ContentView: View {
                 }
                 .padding()
             } else if showProfile == true {
-                Color("lightgray")
+                Color("lightGray")
                 VStack {
                     ProfileView()
                 }

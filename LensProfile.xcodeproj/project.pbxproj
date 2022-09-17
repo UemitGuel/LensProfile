@@ -14,10 +14,10 @@
 		EB57F24828D5CFFC0039C9EF /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = EB57F24728D5CFFC0039C9EF /* Apollo */; };
 		EB57F24A28D5CFFC0039C9EF /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = EB57F24928D5CFFC0039C9EF /* ApolloWebSocket */; };
 		EB57F24D28D5D30F0039C9EF /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F24C28D5D30F0039C9EF /* Apollo.swift */; };
-		EB57F25328D5DF0E0039C9EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25228D5DF0E0039C9EF /* API.swift */; };
 		EB57F25528D5DF810039C9EF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25428D5DF810039C9EF /* Network.swift */; };
 		EB57F25728D5EEC50039C9EF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25628D5EEC50039C9EF /* ProfileView.swift */; };
 		EB57F25928D5F0590039C9EF /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25828D5F0590039C9EF /* AsyncButton.swift */; };
+		EB57F25C28D5FF490039C9EF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57F25B28D5FF490039C9EF /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,11 +28,11 @@
 		EB57F21B28D502940039C9EF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB57F24C28D5D30F0039C9EF /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		EB57F24E28D5D3410039C9EF /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
-		EB57F25128D5DE8A0039C9EF /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = LensProfile/schema.json; sourceTree = SOURCE_ROOT; };
-		EB57F25228D5DF0E0039C9EF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = LensProfile/API.swift; sourceTree = SOURCE_ROOT; };
 		EB57F25428D5DF810039C9EF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		EB57F25628D5EEC50039C9EF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		EB57F25828D5F0590039C9EF /* AsyncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		EB57F25A28D5FEFB0039C9EF /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = schema.json; path = LensProfile/schema.json; sourceTree = SOURCE_ROOT; };
+		EB57F25B28D5FF490039C9EF /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = LensProfile/API.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +89,10 @@
 		EB57F24B28D5D2FB0039C9EF /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				EB57F25228D5DF0E0039C9EF /* API.swift */,
+				EB57F25B28D5FF490039C9EF /* API.swift */,
 				EB57F25428D5DF810039C9EF /* Network.swift */,
-				EB57F25128D5DE8A0039C9EF /* schema.json */,
 				EB57F24C28D5D30F0039C9EF /* Apollo.swift */,
+				EB57F25A28D5FEFB0039C9EF /* schema.json */,
 				EB57F24E28D5D3410039C9EF /* Queries.graphql */,
 			);
 			path = GraphQL;
@@ -201,9 +201,9 @@
 				EB57F25928D5F0590039C9EF /* AsyncButton.swift in Sources */,
 				EB57F21728D502930039C9EF /* ContentView.swift in Sources */,
 				EB57F24D28D5D30F0039C9EF /* Apollo.swift in Sources */,
-				EB57F25328D5DF0E0039C9EF /* API.swift in Sources */,
 				EB57F25728D5EEC50039C9EF /* ProfileView.swift in Sources */,
 				EB57F21528D502930039C9EF /* LensProfileApp.swift in Sources */,
+				EB57F25C28D5FF490039C9EF /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
