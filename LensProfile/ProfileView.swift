@@ -18,18 +18,24 @@ struct ProfileView: View {
         VStack(alignment: .center) {
             HStack {
                 Spacer()
-                Image("profile")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 160)
-                    .cornerRadius(24)
-                    .background(
-                        ZStack(alignment: .topLeading) {
-                            RoundedRectangle(cornerRadius: 24, style: .circular)
-                                .stroke(.white, lineWidth: 8)
-                        }
-                            .compositingGroup()
-                    )
+                AsyncImage(url: getImageURL(string: profile.picture?.asMediaSet?.original.url ?? "")){ image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 160)
+                        .cornerRadius(24)
+                        .background(
+                            ZStack(alignment: .topLeading) {
+                                RoundedRectangle(cornerRadius: 24, style: .circular)
+                                    .stroke(.white, lineWidth: 8)
+                            }
+                                .compositingGroup()
+                        )
+                } placeholder: {
+                    ProgressView()
+                        .frame(height: 160)
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                }
                 Spacer()
             }
 
@@ -128,10 +134,6 @@ struct ProfileView: View {
                 .cornerRadius(24)
             }
             .padding(.bottom)
-
-
-
-            //            Text(profile.picture?.asMediaSet?.original.url ?? "not found")
         }
         .padding()
         .padding(.top, 48)
@@ -146,5 +148,11 @@ struct ProfileView: View {
                 }
             }
         }
+    }
+
+    private func getImageURL(string: String) -> URL {
+        let result = String(string.dropFirst(7))
+        return URL(string: "https://uemit.infura-ipfs.io/ipfs/" + result)!
+
     }
 }
