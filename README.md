@@ -17,6 +17,7 @@ https://www.loom.com/share/deb2557ba54a407fb958f18216ac4704
 
 - Integration as a **Widget**, so the user can see the latest post on any given platform or have a quick glimse on the homescreen about the reactions
 - Integration into **Apple Wallet** for quick access and sharing via QR-Code
+- Show incoming posts and react to them immediatly via **Push-Notifications**
 
 ## Challenges I ran into
 
